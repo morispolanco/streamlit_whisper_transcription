@@ -32,7 +32,7 @@ def summarize(text):
     return response.choices[0].text.strip()
 st.image("https://asesorialinguistica.online/wp-content/uploads/2023/04/Secretary-GPT.png")
 
-st.subheader("Click on the microphone and tell your GPT secretary what to type.")
+st.write("Click on the microphone and tell your GPT secretary what to type.")
 st.write("Ex.: 'Write an email to Mary asking for the financial report.'")
 
 st.sidebar.title("Secretary GPT")
