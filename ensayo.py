@@ -4,19 +4,14 @@ import datetime
 import openai
 import streamlit as st
 
-
 from audio_recorder_streamlit import audio_recorder
 
 working_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(working_dir)
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
-
-
 def transcribe(audio_file):
     transcript = openai.Audio.transcribe("whisper-1", audio_file)
     return transcript
-
 
 def summarize(text):
     response = openai.Completion.create(
@@ -31,10 +26,16 @@ def summarize(text):
 
     return response.choices[0].text.strip()
 
+# Add a text input widget for the user to enter their API key in the Streamlit app's sidebar
+openai_api_key = st.sidebar.text_input("Enter your OpenAI API key", type="password")
+
+# Set up the OpenAI API using the user-provided API key
+if openai_api_key:
+    openai.api_key = openai_api_key
+
 st.image("https://asesorialinguistica.online/wp-content/uploads/2023/04/Secretary-GPT.png")
 
 st.text("Click on the microphone and tell your GPT secretary what to type.")
-
 
 st.sidebar.title("Secretary GPT")
 
