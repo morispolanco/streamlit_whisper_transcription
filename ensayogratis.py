@@ -38,7 +38,7 @@ def summarize(text):
 
     return response.choices[0].text.strip()
 
-st.image("https://hablemosbien.org/wp-content/uploads/2023/08/bot-e1692635185794.png") 
+st.image("https://hablemosbien.org/wp-content/uploads/2023/08/secre.png") 
 
 st.write("Click on the microphone and tell your GPT secretary what to type.")
 st.write("Ex.: 'Write an email to Mary asking for the financial report.'")
