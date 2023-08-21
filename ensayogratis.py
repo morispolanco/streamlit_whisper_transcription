@@ -50,13 +50,14 @@ st.sidebar.markdown("""
 ## Instructions
 1. Make sure your browser allows microphone access to this site.
 2. Enter your Openai api key
-3. Choose to record audio or upload an audio file.
+3. Choose to record audio or upload an audio file, in any language.
 4. To begin, tell your secretary what to record: an email, a report, an article, an essay, etc.
 5. If you record audio, click on the microphone icon to start and to finish.
 6. If you are uploading an audio file, select the file from your device and upload it.
-7. Click on Transcribe. The waiting time is proportional to the recording time.
-8. The transcription appears first and then the request.
-9. Download the generated document in text format.
+7. Maximum recording time: 5 minutes.
+8. Click on Transcribe. The waiting time is proportional to the recording time.
+9. The transcription appears first and then the request.
+10. Download the generated document in text format.
 -  By Moris Polanco
         """)
 
